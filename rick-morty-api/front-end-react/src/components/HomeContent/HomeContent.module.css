@@ -1,0 +1,85 @@
+.homeContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.listCharactersCard {
+  width: 90%;
+  margin: 6rem auto;
+  padding: 2rem;
+  background-color: var(--fourth-color-alpha);
+  border: solid 1px var(--primary-alpha);
+  border-radius: 0.5rem;
+}
+
+.title {
+  font-family: "Poppins";
+  color: var(--secondary-color);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.characters {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  font-family: "Poppins";
+  font-size: 0.8rem;
+}
+
+.listCharacters {
+  list-style: none;
+  background-color: var(--fourth-color);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.listCharacters img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.listCharacters h3 {
+  color: var(--primary-color);
+  padding: 0.5rem;
+}
+
+.listCharacters li {
+  color: var(--secondary-color);
+  padding: 0 0.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.listCharacters a {
+  display: block;
+  color: var(--label-color);
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+}
+
+.listCharacters a:hover {
+  color: var(--primary-color);
+}
+
+@media (max-width: 1200px) {
+  .characters {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .listCharactersCard {
+    width: 100%;
+    margin: 0;
+    border: none;
+    padding-top: 6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .characters {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
